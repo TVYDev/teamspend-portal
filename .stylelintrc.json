@@ -1,0 +1,37 @@
+{
+  "extends": "stylelint-config-standard-scss",
+  "plugins": ["stylelint-scss"],
+  "rules": {
+    "at-rule-no-unknown": null,
+    "scss/at-rule-no-unknown": [true, { "ignoreAtRules": ["/^tailwind/"] }],
+    "no-invalid-position-at-import-rule": [
+      true,
+      { "ignoreAtRules": ["/^tailwind/"] }
+    ],
+    "color-hex-length": "long",
+    "rule-empty-line-before": [
+      "always",
+      {
+        "ignore": ["inside-block"]
+      }
+    ],
+    "at-rule-empty-line-before": [
+      "always",
+      {
+        "except": [
+          "after-same-name",
+          "inside-block",
+          "blockless-after-same-name-blockless",
+          "blockless-after-blockless",
+          "first-nested"
+        ]
+      }
+    ],
+    "selector-class-pattern": "(Mui|[a-zA-Z0-9]+)-?[a-zA-Z0-9]+",
+    "declaration-block-no-redundant-longhand-properties": [
+      true,
+      { "ignoreShorthands": ["animation"] }
+    ],
+    "scss/operator-no-unspaced": null
+  }
+}
